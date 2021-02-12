@@ -1,9 +1,10 @@
 import "./App.css";
+import StartModal from "./components/StartModal";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello form app</h1>
+      <StartModal />
     </div>
   );
 }
