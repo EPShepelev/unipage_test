@@ -1,7 +1,7 @@
 import React from "react";
 import "./StartModal.css";
 
-function StartModal(getText) {
+function StartModal() {
   return (
     <div
       className="card container shadow p-3 mb-5 bg-white rounded"
@@ -12,7 +12,7 @@ function StartModal(getText) {
         <p className="card-text">
           Нажмите "Начать" и проверьте насколько вы хороши!
         </p>
-        <button type="button" className="btn btn-primary" onClick={getText}>
+        <button type="button" className="btn btn-primary">
           Начать
         </button>
       </div>
