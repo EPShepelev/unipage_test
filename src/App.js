@@ -3,6 +3,7 @@ import StartModal from "./components/StartModal/StartModal";
 import Restart from "./components/Restart/Restart";
 import WrittingAccuracy from "./components/WrittingAccuracy/WrittingAccuracy";
 import WrittingSpeed from "./components/WrittingSpeed/WrittingSpeed";
+import WrittingBox from "./components/WrittingBox/WrittingBox";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Restart />
       <WrittingAccuracy />
       <WrittingSpeed />
+      <WrittingBox />
     </div>
   );
 }
