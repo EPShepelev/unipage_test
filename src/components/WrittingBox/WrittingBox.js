@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 function WrittingBox() {
-  const TEXT_URL = "https://baconipsum.com/api/?type=meat-and-filler";
+  const TEXT_URL = "https://baconipsum.com/api/?type=meat-and-filler&paras=1";
 
   let [error, setError] = useState(null);
   let [isLoaded, setIsLoaded] = useState(false);
-  let [textData, setTextData] = useState("");
+  let [textData, setTextData] = useState([]);
 
   const getTextData = () => {
     return (
       fetch(TEXT_URL)
         .then((res) => res.json())
         .then((result) => {
-          isLoaded = setIsLoaded(true);
-          textData = setTextData(result);
+          setIsLoaded((isLoaded = true));
+          setTextData((textData = result[0].split("")));
         }),
       (error) => {
-        error = setError(error);
+        setError(error);
       }
     );
   };
@@ -27,7 +26,9 @@ function WrittingBox() {
       <button type="button" className="btn btn-primary" onClick={getTextData}>
         Go!
       </button>
-      <div>{textData}</div>
+      {textData.map((item, key) => (
+        <span key={key}>{item}</span>
+      ))}
     </div>
   );
 }

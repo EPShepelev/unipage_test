@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import StartModal from "./components/StartModal/StartModal";
 import Restart from "./components/Restart/Restart";
